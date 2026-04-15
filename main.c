@@ -9,9 +9,40 @@ int main()
     for (int i = 0; i < 100; i++){
         dice_rolls[i] = (rand() %6) + 1;
         //check for rolls
-        printf("roll %d\n", dice_rolls[i]);
+        //printf("roll %d\n", dice_rolls[i]);
     }
-    // Your code goes here
+    int one = 0;
+    int two = 0;
+    int three = 0;
+    int four = 0;
+    int five = 0;
+    int six = 0;
+    int sum = 0;
+    for (int i = 0; i < 100; i++) {
+        if (dice_rolls[i] == 1)
+            one++;
+        else if (dice_rolls[i] == 2)
+            two++;
+        else if (dice_rolls[i] == 3)
+            three++;
+        else if (dice_rolls[i] == 4)
+            four++;
+        else if (dice_rolls[i] == 5)
+            five++;
+        else if (dice_rolls[i] == 6) {
+            six++;
+            sum += dice_rolls[i];
+        }
+    }
+
+    printf("one: %d\n", one);
+    printf("two: %d\n", two);
+    printf("three: %d\n", three);
+    printf("four: %d\n", four);
+    printf("five: %d\n", five);
+    printf("six: %d\n", six);
+    printf("sum: %d\n", sum);
+    printf("%.1f\n", sum/100.0);
 
     return 0;
 }
