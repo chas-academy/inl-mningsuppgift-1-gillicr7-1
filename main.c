@@ -31,17 +31,17 @@ int main()
             five++;
         else if (dice_rolls[i] == 6) {
             six++;
-            sum += dice_rolls[i];
         }
+        sum += dice_rolls[i];  
     }
 
-    printf("one: %d\n", one);
-    printf("two: %d\n", two);
-    printf("three: %d\n", three);
-    printf("four: %d\n", four);
-    printf("five: %d\n", five);
-    printf("six: %d\n", six);
-    printf("sum: %d\n", sum);
+    printf("%d\n", one);
+    printf("%d\n", two);
+    printf("%d\n", three);
+    printf("%d\n", four);
+    printf("%d\n", five);
+    printf("%d\n", six);
+    printf("%d\n", sum);
     printf("%.1f\n", sum/100.0);
 
     return 0;
